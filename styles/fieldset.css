@@ -1,0 +1,83 @@
+fieldset + fieldset {
+    margin-top: 3rem;
+}
+
+fieldset {
+    border: none;
+}
+
+input {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font: var(--body-md01);
+    color: var(--input-placeholder);
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+
+    &:focus {
+        border: 1px solid var(--brand-light);
+        outline: none;
+    }
+
+    &:invalid {
+        border: 1px solid var(--danger);
+        outline: none;
+    }
+}
+
+div.error-message {
+    display: none;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font: var(--body-xs01);
+    color: var(--danger);
+}
+
+input:invalid + .error-message {
+    display: flex;
+}
+
+div.file-image-wrapper:has(input:invalid) .error-message {
+    display: flex;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+legend {
+    font: var(--body-sm01);
+    color: var(--text-body);
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+label {
+    display: block;
+    font: var(--body-sm01);
+    color: var(--text-body);
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+div.grid#personalization {
+    display: grid;
+    grid-template-columns: 11rem auto;
+
+    :nth-child(1) {
+        grid-column: 1;
+    }
+
+    :nth-child(2) {
+        grid-column: 2;
+    }
+}

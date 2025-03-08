@@ -1,0 +1,47 @@
+div.themeinput-wrapper {
+    & label {
+        margin-bottom: 1rem;
+    }
+}
+
+div.themeradio-wrapper {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+}
+
+div.themeradio-inner {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.25rem 0.5rem;
+    height: 6.4375rem;
+    border-radius: 0.5rem;
+    color: var(--text-heading);
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);   
+
+    & input {
+        all: unset;
+    }
+
+    & label {
+        display: flex;
+        flex-direction: column;
+
+        & span{
+            display: flex;
+            justify-content: center;
+            margin-top: 0.5rem;
+        } 
+    }
+}
+
+div.themeradio-inner:has(:hover) {
+    background-color: var(--input-stroke);
+}
+
+div.themeradio-inner:has(:checked) {
+    border: 1px solid var(--brand-light);  
+}

@@ -1,0 +1,63 @@
+div.switch-wrapper {
+    cursor: pointer;
+}
+
+div.switch-inner {
+    width: 4rem;
+    height: 2rem;
+    position: relative;
+    border-radius: 99999px;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+}
+
+.switch-inner input,
+.switch-inner input:focus,
+.switch-inner input:hover {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.switch-inner .ball {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    background-color: var(--input-stroke);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(15%, -50%);
+    z-index: 1;
+    transition: transform 0.2s;
+}
+
+.switch-inner::after {
+    font: var(--body-sm01);
+    color: var(--text-heading);
+    content: "Escuro";
+    position: absolute;
+    top: 50%;
+    left: 140%;
+    transform: translate(10%, -50%);
+}
+
+.switch-inner:has(:checked) {
+    background-color: var(--brand-light);
+    border-color: var(--brand-light);
+
+    & div.ball {
+        left: 20%;
+        background-color: var(--text-heading);
+        transform: translate(95%, -50%);
+    }
+
+    &::after {
+        content: "Claro";
+        position: absolute;
+        top: 50%;
+        left: 140%;
+        transform: translate(10%, -50%);
+    }
+}

@@ -1,0 +1,106 @@
+div.colors {
+    & label {
+        margin-bottom: 1rem;
+    }
+}
+
+div.color-wrapper {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(11, 1fr);
+    position: relative;
+
+    & input {
+        all: unset;
+        position: absolute;
+    }
+
+    div:nth-child(1) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--brand-light);
+        }
+    }
+
+    div:nth-child(2) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--navy);
+        }
+    }
+
+    div:nth-child(3) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--purple);
+        }
+    }
+
+    div:nth-child(4) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--fuschia);
+        }
+    }
+
+    div:nth-child(5) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--pink);
+        }
+    }
+
+    div:nth-child(6) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--danger);
+        }
+    }
+
+    div:nth-child(7) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--orange);
+        }
+    }
+
+    div:nth-child(8) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--yellow);
+        }
+    }
+
+    div:nth-child(9) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--lime);
+        }
+    }
+
+    div:nth-child(10) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--green);
+        }
+    }
+
+    div:nth-child(11) {
+        & svg rect:nth-of-type(3) {
+            fill: var(--cyan);
+        }
+    }
+}
+
+div.colorradio-inner {
+    & svg rect:nth-of-type(2) {
+        stroke: none;
+    }
+}
+
+div.colorradio-inner:has(:hover) {
+
+    & svg rect:nth-of-type(1) {
+        fill: var(--shape-hover);
+    }
+
+    & svg rect:nth-of-type(2) {
+        stroke: none;
+    }
+}
+
+div.colorradio-inner:has(:checked) {
+    & svg rect:nth-of-type(2) {
+        stroke: var(--brand-light);
+    }
+}

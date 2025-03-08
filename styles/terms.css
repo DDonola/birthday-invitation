@@ -1,0 +1,49 @@
+fieldset.terms {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    & input {
+        all: unset;
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+    }
+
+    & div.container {
+        display: flex;
+        font: var(--body-sm01);
+        color: var(--text-body);
+        position: relative;
+
+    }
+
+    & div.marker {
+        margin-right: 0.75rem;
+    }
+
+    & .checked {
+        display: none;
+    }
+    
+    & .unchecked {
+        display: block;
+    }
+
+    & div.container + div.container {
+        margin-top: 0.25rem;
+    }
+
+    & a {
+        font: var(--body-sm02);
+        color: var(--brand-light);
+    }
+
+    div.container:has(:checked) .checked {
+        display: block;
+    }
+    
+    div.container:has(:checked) .unchecked {
+        display: none;
+    }
+}
